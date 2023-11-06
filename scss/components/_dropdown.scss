@@ -29,6 +29,8 @@
 }
 
 .top-menu {
+  position: relative;
+
   &__main {
     border-right: 1px solid var(--top-menu-border-color);
     width: 292px;
@@ -91,4 +93,8 @@
       font-weight: 500;
     }
   }
+}
+
+.sub-menu {
+  position: absolute;
 }

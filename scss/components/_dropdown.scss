@@ -1,10 +1,12 @@
+@use "../abstracts";
+
 .dropdown {
   position: absolute;
   left: 0;
 
   width: min(1240px, 100%);
   padding-top: 54px;
-  //   display: none;
+  display: none;
 
   &__inner {
     --inner-padding: 30px;
@@ -29,11 +31,12 @@
 }
 
 .top-menu {
+  --main-column-width: 292px;
   position: relative;
 
   &__main {
     border-right: 1px solid var(--top-menu-border-color);
-    width: 292px;
+    width: var(--main-column-width);
     max-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
     overflow-y: auto;
   }
@@ -43,12 +46,20 @@
   display: flex;
   gap: 14px;
 
+  + .menu-column {
+    margin-top: 22px;
+  }
+
   &__icon {
     position: relative;
 
     flex-shrink: 0;
     width: 36px;
     height: 36px;
+
+    @include abstracts.breakpoint(xl) {
+      display: none;
+    }
   }
 
   &__content {
@@ -56,14 +67,14 @@
   }
 
   &__icon-1 {
-    object-fit: cover;
+    object-fit: contain;
     width: 30px;
     height: 30px;
   }
 
   &__icon-2 {
     position: absolute;
-    object-fit: cover;
+    object-fit: contain;
     width: 24px;
     height: 24px;
     right: 0;
@@ -82,19 +93,31 @@
     margin-top: 19px;
   }
 
+  &__item {
+    &:hover .sub-menu {
+      display: grid;
+    }
+  }
+
+  &__item:hover > &__link {
+    color: #0071dc;
+    font-weight: 500;
+  }
+
   &__link {
     display: block;
     padding: 7px 0;
     font-size: 1.4rem;
     line-height: 142.857%;
-
-    &:hover {
-      color: #0071dc;
-      font-weight: 500;
-    }
   }
 }
 
 .sub-menu {
   position: absolute;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--inner-padding);
+  inset: 0 0 0 var(--main-column-width);
+  padding-left: var(--inner-padding);
+  overflow-y: auto;
 }

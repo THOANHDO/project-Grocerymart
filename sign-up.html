@@ -85,13 +85,20 @@
                   id=""
                   class="form__input"
                   placeholder="Email"
+                  required
                 />
                 <img
                   src="./assets/icons/message.svg"
                   alt=""
                   class="form__input-icon"
                 />
+                <img
+                  src="./assets/icons/form-error.svg"
+                  alt=""
+                  class="form__input-icon-error"
+                />
               </div>
+              <p class="form__error">Email is not in correct format</p>
             </div>
 
             <div class="form__group">
@@ -102,13 +109,21 @@
                   id=""
                   class="form__input"
                   placeholder="Password"
+                  required
+                  minlength="6"
                 />
                 <img
                   src="./assets/icons/lock.svg"
                   alt=""
                   class="form__input-icon"
                 />
+                <img
+                  src="./assets/icons/form-error.svg"
+                  alt=""
+                  class="form__input-icon-error"
+                />
               </div>
+              <p class="form__error">Password at least 6 characters</p>
             </div>
 
             <div class="form__group">
@@ -119,13 +134,20 @@
                   id=""
                   class="form__input"
                   placeholder="Confirm Password"
+                  required
                 />
                 <img
                   src="./assets/icons/lock.svg"
                   alt=""
                   class="form__input-icon"
                 />
+                <img
+                  src="./assets/icons/form-error.svg"
+                  alt=""
+                  class="form__input-icon-error"
+                />
               </div>
+              <p class="form__error">Password at least 6 characters</p>
             </div>
             <div class="form__group form__group--inline">
               <label for="" class="form__checkbox">
@@ -133,7 +155,8 @@
                   type="checkbox"
                   name=""
                   id=""
-                  class="form__checkbox-input"
+                  class="form__checkbox-input d-none"
+                  checked
                 />
                 <span class="form__checkbox-label">Set as default card</span>
               </label>
@@ -142,7 +165,9 @@
               >
             </div>
             <div class="form__group auth__btn-group">
-              <button class="btn btn--primary auth__btn">Sign Up</button>
+              <button class="btn btn--primary auth__btn form__submit-btn">
+                Sign Up
+              </button>
               <button class="btn btn--outline auth__btn btn--no-margin">
                 <img src="./assets/icons/google.svg" alt="" class="btn__icon" />
                 Sign in with Gmail

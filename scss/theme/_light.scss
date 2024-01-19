@@ -51,4 +51,7 @@ html {
 
   // auth
   --auth-content-bg: #fff;
+  @include abstracts.screen(md) {
+    --auth-intro-bg: #fff;
+  }
 }

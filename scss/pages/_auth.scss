@@ -39,7 +39,7 @@
     }
 
     &-img {
-      width: 100%;
+      width: min(424px, 100%);
     }
 
     &-text {
@@ -98,6 +98,10 @@
     }
   }
 
+  &__message {
+    margin-top: 10px;
+  }
+
   &__desc {
     color: #9e9da8;
     padding: 0 20px;
@@ -117,6 +121,10 @@
 
     @include abstracts.screen(md) {
       margin-top: 0;
+    }
+
+    &-forgot {
+      margin-top: 10px;
     }
   }
 

@@ -2,6 +2,7 @@
 
 .home {
   &__container {
+    margin-bottom: 50px;
     margin-top: 40px;
 
     @include abstracts.screen(md) {

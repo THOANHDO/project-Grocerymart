@@ -14,7 +14,7 @@
 
 .prod-info-content {
   border-radius: 20px;
-  background: #fff;
+  background: var(--product-detail-bg);
 }
 
 .prod-preview {
@@ -127,7 +127,7 @@
   }
 
   &__tag {
-    background: #ededf6;
+    background: var(--product-tag-bg);
   }
 
   &__card {

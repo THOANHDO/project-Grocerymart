@@ -60,11 +60,27 @@ html.dark {
 
   // product detail
   --product-detail-bg:#292E39;
-
   --product-detail-info-bg: #171C28;
+  --product-detail-info-content-bg:transparent;
+
+  @include abstracts.screen(md) {
+    --product-detail-bg:#292E39;
+    --product-detail-info-bg: transparent;
+    --product-detail-info-content-bg: #171C2833;
+  }
+
   --product-tag-bg:#292E39;
 
   // Breadcrumbs
   --breadcrumbs-bg: #171C28;
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.20);
+  @include abstracts.screen(md) {
+    --breadcrumbs-bg: #171C2833;
+  }
+  --breadcrumbs-shadow: rgba( 0px 20px 60px 10px);
+
+
+  // search bar
+  --search-bar-bg: #171C28;
 }
+

@@ -45,6 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
   gap: 10px;
   background: #f8f8fb;
   height: 46px;
@@ -54,6 +55,11 @@
   padding: 0 20px;
   user-select: none;
 
+  &--small {
+    height: 40px;
+    padding: 0 16px;
+  }
+
   + .btn {
     &:not(.btn--no-margin) {
       margin-left: 20px;
@@ -62,7 +68,6 @@
 
   &--text {
     background: transparent;
-    color: #9e9da8;
     font-weight: 400;
   }
 

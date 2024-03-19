@@ -94,7 +94,7 @@
         <!-- checkout content -->
         <div class="checkout-container">
           <div class="row gy-xl-3">
-            <div class="col-8 col-xl-12">
+            <div class="col-8 col-xl-8 col-lg-12">
               <div class="cart-info">
                 <!-- shipping -->
                 <div class="cart-info__top">
@@ -106,14 +106,14 @@
                 </div>
                 <!-- payment item 1 -->
                 <article class="payment-item">
-                  <div class="payment-item__content">
+                  <div class="payment-item__info">
                     <h3 class="payment-item__title">Imran Khan</h3>
                     <p class="payment-item__desc">Museum of Rajas, Sylhet Sadar, Sylhet 3100.</p>
                   </div>
                 </article>
                 <!-- payment item 2 -->
                 <article class="payment-item">
-                  <div class="payment-item__content">
+                  <div class="payment-item__info">
                     <h3 class="payment-item__title">Items details</h3>
                     <p class="payment-item__desc">2 items</p>
                   </div>
@@ -131,9 +131,10 @@
                   <article class="payment-item payment-item--pointer">
                     <img src="./assets/img/paymen/delivery-1.png" alt="" class="payment-item__thumb">
                     <div class="payment-item__content">
-                      <h3 class="payment-item__title">Fedex Delivery</h3>
-                      <p class="payment-item__desc">Delivery: 2-3 days work</p>
-                    </div>
+                      <div class="payment-item__info">
+                        <h3 class="payment-item__title">Fedex Delivery</h3>
+                        <p class="payment-item__desc">Delivery: 2-3 days work</p>
+                      </div>
                       <span class="cart-info__checkbox payment-item__checkbox">
                         <input type="radio"
                         name="delivery-method"
@@ -142,6 +143,7 @@
                         />
                         <span class="payment-item__cost">Free</span>
                       </span>
+                    </div>
                   </article>
                 </label>
                 <!-- item -2 -->
@@ -149,9 +151,10 @@
                   <article class="payment-item payment-item--pointer">
                     <img src="./assets/img/paymen/delivery-2.png" alt="" class="payment-item__thumb">
                     <div class="payment-item__content">
-                      <h3 class="payment-item__title">DHL Delivery</h3>
-                      <p class="payment-item__desc">Delivery: 2-3 days work</p>
-                    </div>
+                      <div class="payment-item__info">
+                        <h3 class="payment-item__title">DHL Delivery</h3>
+                        <p class="payment-item__desc">Delivery: 2-3 days work</p>
+                      </div>
                       <span class="cart-info__checkbox payment-item__checkbox">
                         <input type="radio"
                         name="delivery-method"
@@ -159,13 +162,112 @@
                         />
                         <span class="payment-item__cost">$12.00</span>
                       </span>
+                    </div>
                   </article>
                 </label>
               </div>
             </div>
-            <div class="col-4 col-xl-12">
+            <div class="col-4 col-xl-4 col-lg-12">
               <div class="cart-info">
                 <h2 class="cart-info__heading cart-info__heading--lv2">Payment Details</h2>
+                <p class="cart-info__desc">Complete your purchase item by providing your payment details order.</p>
+                <form action="" class="form cart-info__form">
+                  <div class="form__group">
+                    <label for="email" class="form__label form__label--medium">Email Address</label>
+                    <div class="form__text-input">
+                      <input
+                        type="email"
+                        name=""
+                        id="email"
+                        class="form__input"
+                        placeholder="example@gmail.com"
+                        required
+                      />
+                      <img
+                        src="./assets/icons/form-error.svg"
+                        alt=""
+                        class="form__input-icon-error"
+                      />
+                    </div>
+                    <p class="form__error">Password at least 6 characters</p>
+                  </div>
+                  <div class="form__group">
+                    <label for="card-holder" class="form__label form__label--medium">Card Holder</label>
+                    <div class="form__text-input">
+                      <input
+                        type="email"
+                        name="card-holder"
+                        id="card-holder"
+                        class="form__input"
+                        placeholder="example@gmail.com"
+                        required
+                      />
+                      <img
+                        src="./assets/icons/form-error.svg"
+                        alt=""
+                        class="form__input-icon-error"
+                      />
+                    </div>
+                    <p class="form__error">Password at least 6 characters</p>
+                  </div>
+                  <div class="form__group">
+                    <label for="card-details" class="form__label form__label--medium">Card Details</label>
+                    <div class="form__text-input">
+                      <input
+                        type="text"
+                        name="card-details"
+                        id="card-details"
+                        class="form__input"
+                        placeholder="example@gmail.com"
+                        required
+                      />
+                      <img
+                        src="./assets/icons/form-error.svg"
+                        alt=""
+                        class="form__input-icon-error"
+                      />
+                    </div>
+                    <p class="form__error">Password at least 6 characters</p>
+                  </div>
+                  <div class="form__row cart-info__form-row">
+                    <div class="form__group">
+                      <div class="form__text-input">
+                        <input
+                          type="text"
+                          name="card-expire"
+                          id="card-expire"
+                          class="form__input"
+                          placeholder="MM/YY"
+                          required
+                        />
+                        <img
+                          src="./assets/icons/form-error.svg"
+                          alt=""
+                          class="form__input-icon-error"
+                        />
+                      </div>
+                      <p class="form__error">Password at least 6 characters</p>
+                    </div>
+                    <div class="form__group">
+                      <div class="form__text-input">
+                        <input
+                          type="text"
+                          name="card-cvc"
+                          id="card-cvc"
+                          class="form__input"
+                          placeholder="CVC"
+                          required
+                        />
+                        <img
+                          src="./assets/icons/form-error.svg"
+                          alt=""
+                          class="form__input-icon-error"
+                        />
+                      </div>
+                      <p class="form__error">Password at least 6 characters</p>
+                    </div>
+                  </div>
+                </form>
                 <div class="cart-info__row">
                   <span>Subtotal <span class="cart-info__sub-label">(items)</span></span>
                   <span>3</span>
@@ -183,7 +285,7 @@
                   <span>Estimated Total</span>
                   <span>$201.65</span>
                 </div>
-                <a href="#!" class="cart-info__next--btn btn btn--primary btn--rounded">Continue to checkout</a>
+                <a href="#!" class="cart-info__next--btn btn btn--primary btn--rounded">Pay $465.98</a>
               </div>
               <div class="cart-info">
                 <a href="#!">
